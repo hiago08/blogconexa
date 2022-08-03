@@ -7,7 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'Blog Conexa',
+	'timeZone' => 'America/Sao_Paulo',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -47,12 +48,12 @@ return array(
 			'allowAutoLogin'=>true,
 		),
 
+		'extensionBasePaths' => array(
+			'giix' => 'ext.giix.messages', // giix messages directory.
+		),
 
 		'messages' => array (
 			// Pending on core: http://code.google.com/p/yii/issues/detail?id=2624
-			'extensionBasePaths' => array(
-				'giix' => 'ext.giix.messages', // giix messages directory.
-			),
 		),
 
 		// uncomment the following to enable URLs in path-format
