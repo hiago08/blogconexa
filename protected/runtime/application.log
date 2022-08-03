@@ -1,0 +1,140 @@
+2022/08/02 23:42:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "giix". in C:\Yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('giix')
+#1 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\projeto-yii\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=giix
+---
+2022/08/02 23:44:32 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): CrudCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/giixCrud/in...')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/giixCrud/index
+HTTP_REFERER=http://localhost:3000/index.php?r=gii/default/index
+---
+2022/08/03 11:22:47 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'db_blogconexa' in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): CrudCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/giixCrud/in...')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/giixCrud/index
+HTTP_REFERER=http://localhost:3000/?r=gii
+---
+2022/08/03 11:23:46 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'db_blogconexa' in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\model\ModelCode.php(60): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): ModelCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/giixModel/i...')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/giixModel/index
+HTTP_REFERER=http://localhost:3000/?r=gii
+---
+2022/08/03 11:23:57 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'db_blogconexa' in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): CrudCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:3000/?r=gii
+---
+2022/08/03 11:28:07 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'mydb' in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): CrudCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/giixCrud/in...')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/giixCrud/index
+HTTP_REFERER=http://localhost:3000/?r=gii
+---
+2022/08/03 11:34:30 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1049] Unknown database 'mydb' in C:\Yii\framework\db\CDbConnection.php:399
+Stack trace:
+#0 C:\Yii\framework\db\CDbConnection.php(347): CDbConnection->open()
+#1 C:\Yii\framework\db\CDbConnection.php(325): CDbConnection->setActive(true)
+#2 C:\Yii\framework\base\CModule.php(394): CDbConnection->init()
+#3 C:\Yii\framework\base\CModule.php(103): CModule->getComponent('db')
+#4 C:\Yii\framework\gii\generators\crud\CrudCode.php(44): CModule->__get('db')
+#5 C:\Yii\framework\web\CFormModel.php(39): CrudCode->init()
+#6 C:\Yii\framework\gii\CCodeGenerator.php(153): CFormModel->__construct()
+#7 C:\Yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 C:\Yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 C:\Yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\Yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\Yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Yii\framework\web\CWebApplication.php(282): CController->run('index')
+#13 C:\Yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/giixCrud/in...')
+#14 C:\Yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\projeto-yii\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/giixCrud/index
+HTTP_REFERER=http://localhost:3000/?r=gii
+---
