@@ -15,12 +15,12 @@
 
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_usuario'); ?>
-		<?php echo $form->dropDownList($model, 'id_usuario', GxHtml::listDataEx(::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->dropDownList($model, 'id_usuario', GxHtml::listDataEx(Usuario::model()->findAllAttributes(null, true))); //Alterado?> 
 		<?php echo $form->error($model,'id_usuario'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_categoria'); ?>
-		<?php echo $form->dropDownList($model, 'id_categoria', GxHtml::listDataEx(::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->dropDownList($model, 'id_categoria', GxHtml::listDataEx(Categoria::model()->findAllAttributes(null, true))); //Alterado?> 
 		<?php echo $form->error($model,'id_categoria'); ?>
 		</div><!-- row -->
 		<div class="row">
