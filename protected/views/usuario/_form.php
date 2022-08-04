@@ -25,7 +25,11 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'senha'); ?>
+<<<<<<< HEAD
 		<?php echo $form->passwordField($model, 'senha', array('maxlength' => 60)); ?>
+=======
+		<?php echo $form->passwordField($model, 'senha', array('maxlength' => 35)); ?>
+>>>>>>> main
 		<?php echo $form->error($model,'senha'); ?>
 		</div><!-- row -->
 		<div class="row">

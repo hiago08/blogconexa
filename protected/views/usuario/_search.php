@@ -22,7 +22,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'senha'); ?>
-		<?php echo $form->textField($model, 'senha', array('maxlength' => 25)); ?>
+		<?php echo $form->textField($model, 'senha', array('maxlength' => 35)); ?>
 	</div>
 
 	<div class="row">
