@@ -14,20 +14,49 @@ class UserIdentity extends CUserIdentity
 	 * In practical applications, this should be changed to authenticate
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
-	 */
+	*/
+
+	private $id;
+
 	public function authenticate()
 	{
-		$users=array(
-			// username => password
-			'demo'=>'demo',
-			'admin'=>'admin',
-		);
-		if(!isset($users[$this->username]))
-			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users[$this->username]!==$this->password)
-			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else
-			$this->errorCode=self::ERROR_NONE;
-		return !$this->errorCode;
+        $user=Usuario::model()->findByAttributes(array('email'=> $this->username));
+		// var_dump($this->password);
+		// die;
+		// $hash = CPasswordHelper::hashPassword($this->password);
+		// $hash = $user->encryptPassword($this->password);
+		// var_dump($user->id_usuario);
+		// die;
+
+        if($user===null)
+            $this->errorCode=self::ERROR_EMAIL_INVALID;
+        else if(!$user->validarSenha($this->password))
+            $this->errorCode=self::ERROR_PASSWORD_INVALID;
+        else
+        {
+            $this->id=$user->id_usuario;
+            $this->username=$user->email;
+            $this->errorCode=self::ERROR_NONE;
+        }
+        return $this->errorCode==self::ERROR_NONE;
+
+		// $users=array(
+		// 	// username => password
+		// 	'demo'=>'demo',
+		// 	'admin'=>'admin',
+		// );
+		// if(!isset($users[$this->username]))
+		// 	$this->errorCode=self::ERROR_USERNAME_INVALID;
+		// elseif($users[$this->username]!==$this->password)
+		// 	$this->errorCode=self::ERROR_PASSWORD_INVALID;
+		// else
+		// 	$this->errorCode=self::ERROR_NONE;
+		// return !$this->errorCode;
 	}
+
+	public function getId()
+    {
+        return $this->id;
+    }
+
 }

@@ -39,7 +39,7 @@ abstract class BaseUsuario extends GxActiveRecord {
 			array('nome, email, senha, coworking', 'required'),
 			array('nome', 'length', 'max'=>80),
 			array('email, coworking', 'length', 'max'=>100),
-			array('senha', 'length', 'max'=>25),
+			array('senha', 'length', 'max'=>60),
 			array('id_usuario, nome, email, senha, coworking', 'safe', 'on'=>'search'),
 		);
 	}

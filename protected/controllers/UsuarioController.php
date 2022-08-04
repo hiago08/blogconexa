@@ -15,7 +15,7 @@ class UsuarioController extends GxController {
 
 		if (isset($_POST['Usuario'])) {
 			$model->setAttributes($_POST['Usuario']);
-
+			$model->senha = CPasswordHelper::hashPassword($model->senha); //Criptografa senha
 			if ($model->save()) {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
@@ -33,7 +33,7 @@ class UsuarioController extends GxController {
 
 		if (isset($_POST['Usuario'])) {
 			$model->setAttributes($_POST['Usuario']);
-
+			$model->senha = CPasswordHelper::hashPassword($model->senha); //Criptografa senha
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->id_usuario));
 			}
