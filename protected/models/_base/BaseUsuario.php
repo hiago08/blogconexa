@@ -36,10 +36,11 @@ abstract class BaseUsuario extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('nome, email, senha, coworking', 'required'),
+			array('nome, email, coworking', 'required'),
 			array('nome', 'length', 'max'=>80),
 			array('email, coworking', 'length', 'max'=>100),
-			array('senha', 'length', 'max'=>25),
+			array('senha', 'length', 'max'=>35),
+			array('senha', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('id_usuario, nome, email, senha, coworking', 'safe', 'on'=>'search'),
 		);
 	}
